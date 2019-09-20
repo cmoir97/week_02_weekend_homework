@@ -43,7 +43,8 @@ class Room
     return "Sorry that room is full" if room.is_room_full == true
   end
 
-  def guest_pays_entry_fee(guest)
+  def guest_pays_entry_fee(guest, amount)
+    guest.remove_money_from_guest(amount) if is_room_full() == false
 
   end
 
