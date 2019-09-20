@@ -30,4 +30,19 @@ class Room
   def remove_song_from_room(song)
     @songs.delete(song)
   end
+
+  def is_room_full
+    return "Room is Full" if @guests.length == @room_capacity
+    return "Room is Not Full" if @guests.length < @room_capacity
+
+  end
+
+
+
+
+
+
+
+
+
 end
