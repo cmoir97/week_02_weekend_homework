@@ -34,8 +34,11 @@ class RoomTest < MiniTest::Test
     assert_equal(1, @room.number_of_songs)
   end
 
-
-
+  def test_remove_guest_from_room
+    @room.add_guest_to_room(@guest)
+    @room.remove_guest_from_room(@guest)
+    assert_equal(0, @room.guest_count)
+  end
 
 
 
