@@ -26,7 +26,7 @@ class Room
     @guests.delete(guest)
   end
 
-
-
-
+  def remove_song_from_room(song)
+    @songs.delete(song)
+  end
 end
