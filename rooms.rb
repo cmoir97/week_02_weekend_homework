@@ -6,7 +6,9 @@ class Room
     @songs = []
   end
 
-
+  def guest_count
+    @guests.length
+  end
 
 
 
