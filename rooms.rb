@@ -37,10 +37,9 @@ class Room
 
   end
 
-  def enough_room_guest_added(room, guest)
-    if room.is_room_full == false
-      then room.add_guest_to_room(guest)
-    end
+  def enough_room(room, guest)
+    room.add_guest_to_room(guest) if room.is_room_full == false
+    return "Sorry that room is full" if room.is_room_full == true
   end
 
 
