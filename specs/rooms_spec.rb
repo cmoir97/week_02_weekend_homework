@@ -70,4 +70,8 @@ class RoomTest < MiniTest::Test
     assert_equal(10, @room.room_entry_fee)
   end
 
+  def test_guest_pays_entry_fee
+    @room.guest_pays_entry_fee
+  end
+
 end
