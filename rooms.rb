@@ -10,6 +10,9 @@ class Room
     @guests.length
   end
 
+  def number_of_songs
+    @songs.length
+  end
 
 
 
