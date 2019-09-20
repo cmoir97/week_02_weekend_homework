@@ -32,12 +32,16 @@ class Room
   end
 
   def is_room_full
-    return "Room is Full" if @guests.length == @room_capacity
-    return "Room is Not Full" if @guests.length < @room_capacity
+    return true if @guests.length == @room_capacity
+    return false if @guests.length < @room_capacity
 
   end
 
-
+  def enough_room_guest_added(room, guest)
+    if room.is_room_full == false
+      then room.add_guest_to_room(guest)
+    end
+  end
 
 
 
