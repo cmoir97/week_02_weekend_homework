@@ -75,4 +75,14 @@ class RoomTest < MiniTest::Test
     assert_equal(40, @guest.guest_wallet)
   end
 
+  def test_bar_money_taken
+    assert_equal(0, @room.bar_money_taken)
+  end
+
+  # def test_add_money_to_bar
+  #   @room.guest_pays_entry_fee(@guest, @room.room_entry_fee())
+  #   assert_equal(10, @room.bar_money_taken)
+  #   #not attr required so add function for getting the bar money taken amount
+  # end
+
 end

@@ -6,6 +6,7 @@ class Room
     @songs = []
     @room_capacity = room_capacity
     @room_entry_fee = room_entry_fee
+    @bar_money_taken = 0
   end
 
   def guest_count
@@ -45,11 +46,12 @@ class Room
 
   def guest_pays_entry_fee(guest, amount)
     guest.remove_money_from_guest(amount) if is_room_full() == false
-
+    @bar_money_taken += amount
   end
 
-
-
+  def bar_money_taken
+    return @bar_money_taken
+  end
 
 
 end
